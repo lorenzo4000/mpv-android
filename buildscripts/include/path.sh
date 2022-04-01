@@ -26,3 +26,5 @@ fi
 toolchain=$(echo "$DIR/sdk/android-ndk-r24/toolchains/llvm/prebuilt/"*)
 export PATH="$toolchain/bin:$DIR/sdk/android-ndk-r24:$DIR/sdk/bin:$PATH"
 export ANDROID_HOME="$DIR/sdk/android-sdk-$os"
+export ANDROID_NDK_ROOT="$DIR/sdk/android-ndk-r24"
+export NDK_TOOLCHAIN_FILE="$ANDROID_NDK_ROOT/build/cmake/android.toolchain.cmake"

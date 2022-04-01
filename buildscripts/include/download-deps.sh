@@ -17,6 +17,20 @@ fi
 # dav1d
 [ ! -d dav1d ] && git clone https://code.videolan.org/videolan/dav1d.git
 
+# openssl 
+if [ ! -d openssl ]; then
+	mkdir openssl
+	$WGET https://github.com/openssl/openssl/archive/refs/tags/openssl-$v_openssl.tar.gz -O - | \
+		tar -xz -C openssl --strip-components=1
+fi
+
+# libssh
+if [ ! -d libssh ]; then
+	mkdir libssh
+	$WGET https://git.libssh.org/projects/libssh.git/snapshot/libssh-$v_libssh.tar.xz -O - | \
+		tar -xJ -C libssh --strip-components=1
+fi
+
 # ffmpeg
 if [ ! -d ffmpeg ]; then
 	git clone https://github.com/FFmpeg/FFmpeg ffmpeg

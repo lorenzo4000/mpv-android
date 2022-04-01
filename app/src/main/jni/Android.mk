@@ -58,6 +58,12 @@ LOCAL_EXPORT_C_INCLUDES := $(PREFIX)/include
 include $(PREBUILT_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libssh
+LOCAL_SRC_FILES := $(PREFIX)/lib/$(LOCAL_MODULE).so
+LOCAL_EXPORT_C_INCLUDES := $(PREFIX)/include
+include $(PREBUILT_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
 
 LOCAL_MODULE    := libplayer
 LOCAL_CFLAGS    := -Werror
@@ -71,6 +77,6 @@ LOCAL_SRC_FILES := \
 	event.cpp \
 	thumbnail.cpp
 LOCAL_LDLIBS    := -llog -lGLESv3 -lEGL -latomic
-LOCAL_SHARED_LIBRARIES := swscale avcodec mpv
+LOCAL_SHARED_LIBRARIES := swscale avcodec mpv ssh
 
 include $(BUILD_SHARED_LIBRARY)
