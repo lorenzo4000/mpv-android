@@ -17,5 +17,8 @@ mkdir -p $build
 cd $build
 
 ./../Configure android-arm -D__ANDROID_API__=21 --prefix=$prefix_dir --openssldir=$prefix_dir/ssl
-make
+
+make build_generated
+make libssl.a
+make libcrypto.a
 make install
