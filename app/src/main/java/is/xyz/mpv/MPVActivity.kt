@@ -250,7 +250,8 @@ class MPVActivity : AppCompatActivity(), MPVLib.EventObserver, TouchGesturesObse
             finishWithResult(RESULT_CANCELED)
             return
         }
-
+		
+		Log.w(TAG, "paaaathhhhhh: $filepath")	
         player.initialize(applicationContext.filesDir.path)
         player.addObserver(this)
         player.playFile(filepath)

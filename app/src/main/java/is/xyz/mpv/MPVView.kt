@@ -22,6 +22,8 @@ internal class MPVView(context: Context, attrs: AttributeSet) : SurfaceView(cont
         // certain options are hardcoded:
         MPVLib.setOptionString("save-position-on-quit", "no")
         MPVLib.setOptionString("force-window", "no")
+        //MPVLib.setOptionString("stream-lavf-o", "private_key=/storage/3EC4-691A/ssh/id_rsa.txt")
+        //MPVLib.setOptionString("stream-lavf-o", "private_key=/storage/3EC4-691A/Harry.Potter.and.the.Sorcerers.Stone.2001.1080p.BrRip.x264.YIFY ( FIRST TRY).mp4")
 
         holder.addCallback(this)
         observeProperties()

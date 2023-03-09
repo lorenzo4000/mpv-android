@@ -133,6 +133,8 @@ object Utils {
             // find the actual root path of that volume
             while (storageManager.getStorageVolume(root.parentFile) == vol) {
                 root = root.parentFile
+				var root_path_thing = root.toString();
+				Log.w(TAG, "Ssfjsahfhjgjgsj:: ;;f:F:dg:d;G ;:g:d:g:g:;D: g;r GRJHAHHG ;GD:G: $root_path_thing");
             }
 
             if (!list.any { it.path == root })
@@ -358,5 +360,8 @@ object Utils {
             /* Picture */
             "apng", "bmp", "exr", "gif", "j2c", "j2k", "jfif", "jp2", "jpc", "jpe", "jpeg", "jpg",
             "jpg2", "png", "tga", "tif", "tiff", "webp",
+			
+			/* */
+			"txt", "txt.pub",
     )
 }

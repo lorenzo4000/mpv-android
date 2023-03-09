@@ -28,3 +28,9 @@ You can download mpv-android from the [Releases section](https://github.com/mpv-
 ## Building from source
 
 Take a look at [README.md](buildscripts/README.md) inside the `buildscripts` directory.
+
+## SFTP stream protocol
+
+If you are using private key auth, set mpv.conf with `stream-lavf-o=private_key="path_to_key"`
+
+Use URL: `sftp://username@host[:password]/path_to_media`
